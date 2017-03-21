@@ -1,3 +1,7 @@
+                                              // #############################################
+                                              // 201703211811L   EL MARTES   JAY
+                                              // https://github.com/ga-wdi-lessons/building-a-mean-app/blob/master/angular-walkthrough-annotated.md
+
 const express = require("express");
 const parser  = require("body-parser");
 const hbs     = require("express-handlebars");
@@ -20,6 +24,12 @@ app.use("/assets", express.static("public"));
 // app.use(parser.urlencoded({extended: true}));
 app.use(parser.json({extended: true}));
 
+
+app.get("/scooters", function(req, res){
+  scooter.find({}).then(function(scooters){
+    res.json(scooters)
+  });
+});
 
                        // Makes API Routes for Candidates
                       // https://github.com/ga-wdi-lessons/building-a-mean-app/blob/master/angular-walkthrough-annotated.md
@@ -65,9 +75,17 @@ app.put("/api/scooters/:name", function(req, res){
   });
 });
 
+
+                                    // http://stackoverflow.com/questions/36325119/how-to-res-json-and-res-render-at-the-same-time-pass-mongo-db-to-angularjs
+                                    // router.get('/items', function(req, res, next) {
+                                    //     res.render('items', { title: 'Bookshop | Items' });
+                                    // app.get("/scooters", function(req, res){
+                                    // res.render("scooters", {name: 'Ducati'});
 app.get("/*", function(req, res){
   res.render("scooters");
 });
+
+
 
 app.listen(app.get("port"), function(){
   console.log("Welcome to my database, I hear everything!");

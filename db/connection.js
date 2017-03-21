@@ -1,6 +1,10 @@
+                                    // #############################################
+                                    // 201703211811L   EL MARTES   JAY
+                                    // https://github.com/ga-wdi-lessons/building-a-mean-app/blob/master/angular-walkthrough-annotated.md
+
 var mongoose  = require("mongoose");
 
-var ScooterSchema = new mongoose.Schema( { name: String, year: Number } );
+var scooterSchema = new mongoose.Schema( { name: String, year: Number } );
 
 mongoose.model("scooter", scooterSchema);
 
