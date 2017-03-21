@@ -1,0 +1,13 @@
+<h2>{{vm.scooters.length}} Scooters</h2>
+
+<div class="scooters">
+  <h3 data-ng-repeat="scooter in vm.scooters">
+    <a data-ui-sref="show({name: scooter.name})">{{scooter.name}} for Scooter in {{scooter.year}}</a>
+  </h2>
+</div>
+
+<form ng-submit="vm.create()">
+  <input type="text" ng-model="vm.newScooter.name" placeholder="Name" />
+  <input type="number" ng-model="vm.newScooter.year" placeholder="Year" />
+  <button type="submit">Run for Office</button>
+</form>

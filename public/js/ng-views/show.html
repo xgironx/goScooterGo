@@ -1,0 +1,14 @@
+<div ng-if="!vm.scooter">
+  <h2>That Scooter Has Dropped Out!</h2>
+</div>
+
+<div ng-if="vm.scooter">
+  <h2>{{vm.scooter.name}} for Scooter in {{vm.scooter.year}}!</h2>
+
+  <div class="edit-scooter">
+    <input type="text" ng-model="vm.scooter.name" placeholder="Name" />
+    <input type="number" ng-model="vm.scooter.year" placeholder="Year" />
+    <button data-ng-click="vm.update()">Edit Platform</button>
+    <button data-ng-click="vm.destroy()">Concede</button>
+  </div>
+</div>
