@@ -1,14 +1,27 @@
+                                        <!-- // #############################################
+                                        // 201703211811L   EL MARTES   JAY
+                                        // https://github.com/ga-wdi-lessons/building-a-mean-app/blob/master/angular-walkthrough-annotated.md   -->
+                                          <!-- Adds Candidate Destroy
+
+                                          As we put some of the finishing touches on our app, let's add the functionality so a candidate can "concede".
+
+                                          Steps:
+
+                                          Modify the "concede" button in show.html to run an update method on click
+                                          Define an update method in your showCtrl in app.js
+                                          Pass in $state to your show controller than use it to redirect the user to the index root after deletion
+                                          Great, now we have completed full CRUD for candidates in our MEAN app. -->
 <div ng-if="!vm.scooter">
-  <h2>That Scooter Has Dropped Out!</h2>
+  <h2>That scooter Has A Great Ass!</h2>
 </div>
 
 <div ng-if="vm.scooter">
-  <h2>{{vm.scooter.name}} for Scooter in {{vm.scooter.year}}!</h2>
+  <h2>{{vm.scooter.name}} for scooter in {{vm.scooter.year}}!</h2>
 
   <div class="edit-scooter">
-    <input type="text" ng-model="vm.scooter.name" placeholder="Name" />
-    <input type="number" ng-model="vm.scooter.year" placeholder="Year" />
-    <button data-ng-click="vm.update()">Edit Platform</button>
-    <button data-ng-click="vm.destroy()">Concede</button>
+    <input type="text"     data-ng-model="vm.scooter.name" placeholder="Name" />
+    <input type="number"   data-ng-model="vm.scooter.year" placeholder="Year" />
+    <button                data-ng-click="vm.update()" >      Get LOUD Aftermarket Pipes                 </button>
+    <button                data-ng-click="vm.destroy()">      Do a big-ass burn-out.  Smoke 'em tires!'  </button>
   </div>
 </div>

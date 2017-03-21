@@ -1,13 +1,27 @@
-<h2>{{vm.scooters.length}} Scooters</h2>
+                      <!-- // #############################################
+                      // 201703211811L   EL MARTES   JAY
+                      // https://github.com/ga-wdi-lessons/building-a-mean-app/blob/master/angular-walkthrough-annotated.md   -->
+
+<h2>{{vm.scooters.length}} Our Scooters</h2>
 
 <div class="scooters">
   <h3 data-ng-repeat="scooter in vm.scooters">
-    <a data-ui-sref="show({name: scooter.name})">{{scooter.name}} for Scooter in {{scooter.year}}</a>
+    <a data-ui-sref="show({name: scooter.name})"> OEM:  {{scooter.name}} Model Year:  {{scooter.year}}</a>
   </h2>
 </div>
-
+                  <!-- ability to create a new Candidate...
+                  Steps:
+                  Update a the index view to include a form to create a new candidate
+                  Update the index controller to add a definition for our create method
+                  It should persist the new candidate to the database
+                  Take the user to the new candidate's show page after it is saved
+                  Update the create route in index.js to pass in req.body not req.body.candidate
+                  Change our app's body-parser configuration to use JSON
+                  In public/js/ng-views/index.html: We need to add some UI.
+                  In public/js/app.js: We need to update the index controller to add a definition for our create method
+                  Finally, we need to update the route in index.js: -->
 <form ng-submit="vm.create()">
-  <input type="text" ng-model="vm.newScooter.name" placeholder="Name" />
-  <input type="number" ng-model="vm.newScooter.year" placeholder="Year" />
+  <input type="text" ng-model="vm.newscooter.name" placeholder="Name" />
+  <input type="number" ng-model="vm.newscooter.year" placeholder="Year" />
   <button type="submit">Run for Office</button>
 </form>

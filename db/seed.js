@@ -1,10 +1,10 @@
 var mongoose  = require("./connection");
 var seedData  = require("./seeds");
 
-var Scooter = mongoose.model("Scooter");
+var scooter = mongoose.model("scooter");
 
-Scooter.remove({}).then(function(){
-  Scooter.collection.insert(seedData).then(function(){
+scooter.remove({}).then(function(){
+  scooter.collection.insert(seedData).then(function(){
     process.exit();
   });
 });
