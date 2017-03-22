@@ -2,7 +2,8 @@
                       // 201703211811L   EL MARTES   JAY
                       // https://github.com/ga-wdi-lessons/building-a-mean-app/blob/master/angular-walkthrough-annotated.md   -->
 
-<h2>{{vm.scooters.length}} Our Scooters</h2>
+                      <!-- <h2>{{vm.scooters.length}} Our Scooters</h2> -->
+<h2>Our Scooters</h2>
 
 <div class="scooters">
   <h3 data-ng-repeat="scooter in vm.scooters">
@@ -23,5 +24,5 @@
 <form ng-submit="vm.create()">
   <input type="text" ng-model="vm.newscooter.name" placeholder="Name" />
   <input type="number" ng-model="vm.newscooter.year" placeholder="Year" />
-  <button type="submit">Run for Office</button>
+  <button type="submit">Git you a new scooter</button>
 </form>

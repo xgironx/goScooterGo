@@ -29,7 +29,7 @@ angular
   }
 
   function scooter ($resource) {
-    return $resource("/api/scooters/:name", {}, {
+    return $resource("/scooters/:name", {}, {
       update: { method: "PUT" }
     });
   }
@@ -40,7 +40,7 @@ angular
     this.newScooter = new scooter()
     this.create = function () {
       this.newscooter.$save().then(function(scooter){
-        $state.go("show", { name: scooter.name })
+        $state.go("show", { name: scooter.name })     //show the scooter i just created
       })
     }
   }

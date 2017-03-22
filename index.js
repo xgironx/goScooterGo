@@ -25,7 +25,7 @@ app.use("/assets", express.static("public"));
 app.use(parser.json({extended: true}));
 
 
-app.get("/scooters", function(req, res){
+app.get("/api/scooters", function(req, res){
   scooter.find({}).then(function(scooters){
     res.json(scooters)
   });
